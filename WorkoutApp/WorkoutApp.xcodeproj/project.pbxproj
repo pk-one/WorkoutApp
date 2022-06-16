@@ -24,6 +24,9 @@
 		A026C41D285BD31400252663 /* SecondaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A026C41C285BD31400252663 /* SecondaryButton.swift */; };
 		A026C41F285BD9BF00252663 /* OverviewNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A026C41E285BD9BF00252663 /* OverviewNavigationBar.swift */; };
 		A026C421285BD9FD00252663 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A026C420285BD9FD00252663 /* BaseView.swift */; };
+		A026C423285BE34A00252663 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A026C422285BE34A00252663 /* WeekView.swift */; };
+		A026C426285BE4A400252663 /* WeekdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A026C425285BE4A400252663 /* WeekdayView.swift */; };
+		A026C428285BE75E00252663 /* Date + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A026C427285BE75E00252663 /* Date + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +49,9 @@
 		A026C41C285BD31400252663 /* SecondaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondaryButton.swift; sourceTree = "<group>"; };
 		A026C41E285BD9BF00252663 /* OverviewNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewNavigationBar.swift; sourceTree = "<group>"; };
 		A026C420285BD9FD00252663 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		A026C422285BE34A00252663 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		A026C425285BE4A400252663 /* WeekdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekdayView.swift; sourceTree = "<group>"; };
+		A026C427285BE75E00252663 /* Date + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 			children = (
 				A026C402285BB62D00252663 /* UIColor + Extensions.swift */,
 				A026C40D285BCA3700252663 /* UIView + Extensions.swift */,
+				A026C427285BE75E00252663 /* Date + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -182,10 +189,20 @@
 		A026C41B285BD2F100252663 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A026C424285BE45200252663 /* WeekView */,
 				A026C41C285BD31400252663 /* SecondaryButton.swift */,
 				A026C41E285BD9BF00252663 /* OverviewNavigationBar.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A026C424285BE45200252663 /* WeekView */ = {
+			isa = PBXGroup;
+			children = (
+				A026C422285BE34A00252663 /* WeekView.swift */,
+				A026C425285BE4A400252663 /* WeekdayView.swift */,
+			);
+			path = WeekView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A026C423285BE34A00252663 /* WeekView.swift in Sources */,
 				A026C41A285BCC7D00252663 /* SettingsController.swift in Sources */,
 				A026C3EE285BB16D00252663 /* OverviewController.swift in Sources */,
 				A026C403285BB62D00252663 /* UIColor + Extensions.swift in Sources */,
@@ -268,9 +286,11 @@
 				A026C418285BCC6600252663 /* ProgressController.swift in Sources */,
 				A026C41F285BD9BF00252663 /* OverviewNavigationBar.swift in Sources */,
 				A026C406285BB77400252663 /* Resources.swift in Sources */,
+				A026C428285BE75E00252663 /* Date + Extension.swift in Sources */,
 				A026C3EA285BB16D00252663 /* AppDelegate.swift in Sources */,
 				A026C3EC285BB16D00252663 /* SceneDelegate.swift in Sources */,
 				A026C421285BD9FD00252663 /* BaseView.swift in Sources */,
+				A026C426285BE4A400252663 /* WeekdayView.swift in Sources */,
 				A026C40E285BCA3700252663 /* UIView + Extensions.swift in Sources */,
 				A026C40C285BC87700252663 /* BaseController.swift in Sources */,
 			);
