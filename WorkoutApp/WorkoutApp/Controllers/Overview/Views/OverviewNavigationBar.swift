@@ -25,8 +25,8 @@ final class OverviewNavigationBar: BaseView {
 }
 
 extension OverviewNavigationBar {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         addView(titleLabel)
         addView(allWorkoutButton)
         addView(addButton)
@@ -38,8 +38,8 @@ extension OverviewNavigationBar {
         addBottomBorder(with: R.Colors.separator, height: 1)
     }
     
-    override func layoutViews() {
-        super.layoutViews()
+    override func constraintViews() {
+        super.constraintViews()
         NSLayoutConstraint.activate([
             addButton.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 8),
             addButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15),
@@ -63,8 +63,8 @@ extension OverviewNavigationBar {
         ])
     }
     
-    override func configureViews() {
-        super.configureViews()
+    override func configureAppearance() {
+        super.configureAppearance()
         backgroundColor = .white
         
         titleLabel.text = R.Strings.NavBar.overview
