@@ -14,13 +14,13 @@ class OverviewController: BaseController {
 }
 
 extension OverviewController {
-    override func addViews() {
-        super.addViews()
+    override func setupViews() {
+        super.setupViews()
         view.addView(navigationBar)
     }
     
-    override func layoutViews() {
-        super.layoutViews()
+    override func constraintViews() {
+        super.constraintViews()
         NSLayoutConstraint.activate([
             navigationBar.topAnchor.constraint(equalTo: view.topAnchor),
             navigationBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
@@ -28,8 +28,8 @@ extension OverviewController {
         ])
     }
     
-    override func configure() {
-        super.configure()
+    override func configureAppearance() {
+        super.configureAppearance()
         navigationController?.navigationBar.isHidden = true
     }
 }
