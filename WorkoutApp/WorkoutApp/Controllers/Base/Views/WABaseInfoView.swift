@@ -1,5 +1,5 @@
 //
-//  BaseInfoView.swift
+//  WABaseInfoView.swift
 //  WorkoutApp
 //
 //  Created by Pavel Olegovich on 18.06.2022.
@@ -7,7 +7,9 @@
 
 import UIKit
 
-class BaseInfoView: BaseView {
+class WABaseInfoView: BaseView {
+    private let buttonTitle: String?
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = R.Fonts.helveticaRegular(with: 13)
@@ -15,11 +17,7 @@ class BaseInfoView: BaseView {
         return label
     }()
     
-    private let button: UIButton = {
-        let button = UIButton()
-        button.backgroundColor = .red
-        return button
-    }()
+    private lazy var button = WAButton(with: .primary, and: self.buttonTitle ?? "")
     
     private let contentView: UIView = {
         let view = UIView()
@@ -31,13 +29,13 @@ class BaseInfoView: BaseView {
     }()
     
     init(with title: String? = nil, buttonTitle: String? = nil) {
+        self.buttonTitle = buttonTitle?.uppercased()
         titleLabel.text = title?.uppercased()
         titleLabel.textAlignment = buttonTitle == nil ? .center : .left
         
-        button.setTitle(buttonTitle, for: .normal)
-        button.isHidden = buttonTitle == nil ? true : false
-        
         super.init(frame: .zero)
+        
+        button.isHidden = buttonTitle == nil ? true : false
     }
     
     required init?(coder: NSCoder) {
@@ -49,7 +47,7 @@ class BaseInfoView: BaseView {
     }
 }
 
-extension BaseInfoView {
+extension WABaseInfoView {
     override func setupViews() {
         super.setupViews()
         
@@ -72,8 +70,7 @@ extension BaseInfoView {
             
             button.trailingAnchor.constraint(equalTo: trailingAnchor),
             button.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
-            button.heightAnchor.constraint(equalToConstant: 30),
-            button.widthAnchor.constraint(equalToConstant: 130),
+            button.heightAnchor.constraint(equalToConstant: 28),
             
             contentView.topAnchor.constraint(equalTo: contentTopAnchor, constant: contentOffset),
             contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
